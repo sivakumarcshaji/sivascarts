@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{dett.img.url}}" width="400" height="=400" >
+        </div>
+
+    <div class="col-md-6">
+        <h6>{{dett.name}}</h6>
+        <h6>{{dett.star}}</h6>
+        <h6>{{dett.desc}}</h6>
+    <a class="btn btn-warning" href="{% url 'engine:update' dett.id %}">update</a>
+        <a class="btn btn-danger" href="{% url 'engine:delete' dett.id %}">delete</a>
+    </div>
+    </div>
+</div>
+{% endblock %}
+
